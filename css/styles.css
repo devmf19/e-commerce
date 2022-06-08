@@ -1,24 +1,30 @@
 html {
     box-sizing: border-box;
-    font-size: 62.5%; /*1REM = 10px*/
+    font-size: 62.5%;
+    /*1REM = 10px*/
 }
 
-*, *:before, *:after{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
+    font-family: 'Nunito', sans-serif;
     font-size: 1.6rem;
     line-height: 2;
 }
 
 /*ESTILOS GOBALES*/
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 0 0 2rem 0;
 }
 
 h1 {
-    font-size: 3.8rem;
+    font-size: 5.5rem;
 }
 
 a {
@@ -26,7 +32,7 @@ a {
     color: #000;
 }
 
-.contenedor{
+.contenedor {
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -41,11 +47,12 @@ img {
     display: block;
     color: #ffffff;
     text-transform: uppercase;
+    font-weight: bold;
     padding: 1rem;
     transition: background-color .3s ease-out;
     text-align: center;
-    border: none;
     width: 100%;
+    border: none;
 }
 
 .btn:hover {
@@ -54,6 +61,10 @@ img {
 }
 
 /*UTILIDADES*/
+.title {
+    font-size: 3.5rem
+}
+
 .text-center {
     text-align: center;
 }
@@ -67,12 +78,12 @@ img {
 }
 
 /*ESTILOS DEL HEADER Y BARRA DE NAVEGACIÓN*/
-.nombre-sitio{
+.nombre-sitio {
     margin-top: 5rem;
     text-align: center;
 }
 
-.nombre-sitio span{
+.nombre-sitio span {
     color: #037bc0;
 }
 
@@ -81,9 +92,14 @@ img {
 }
 
 .nav-principal {
+    font-weight: bold;
     padding: 2rem 0;
     display: flex;
     justify-content: space-between;
+}
+
+.nav-principal a:hover {
+    color: #037bc0;
 }
 
 .hero {
@@ -99,7 +115,7 @@ img {
     padding: 5rem 0;
 }
 
-.categoria{
+.categoria {
     cursor: pointer;
 }
 
@@ -109,21 +125,21 @@ img {
     border-top-right-radius: 1rem;*/
 }
 
-.categoria a{
+.categoria a {
     display: block;
     text-align: center;
     padding: 2rem;
     font-size: 2rem;
 }
 
-.categoria:hover a{
+.categoria:hover a {
     background-color: #037bc0;
     color: #ffffff;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
 
-.listado-categorias{
+.listado-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -164,17 +180,17 @@ img {
     gap: 2rem;
 }
 
-.producto:nth-child(1){
+.producto:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 7;
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
 
-.producto:nth-child(1) img{
+.producto:nth-child(1) img {
     height: 40rem;
     width: 100%;
-    object-fit: cover;                                                       
+    object-fit: cover;
 }
 
 .producto:nth-child(2) {
@@ -187,7 +203,7 @@ img {
     grid-column-end: 7;
 }
 
-.producto:nth-child(2) img, 
+.producto:nth-child(2) img,
 .producto:nth-child(3) img {
     height: 30rem;
     width: 100%;
@@ -234,24 +250,24 @@ img {
     grid-column-end: 7;
 }
 
-.producto:nth-child(10) img, 
+.producto:nth-child(10) img,
 .producto:nth-child(11) img {
     height: 30rem;
     width: 100%;
     object-fit: cover;
 }
 
-.producto:nth-child(12){
+.producto:nth-child(12) {
     grid-column-start: 1;
     grid-column-end: 7;
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
 
-.producto:nth-child(12) img{
+.producto:nth-child(12) img {
     height: 40rem;
     width: 100%;
-    object-fit: cover;                                                       
+    object-fit: cover;
 }
 
 .texto-producto {
@@ -274,9 +290,13 @@ img {
     gap: 2rem;
 }
 
-.footer-menu{
+.footer-menu {
     display: flex;
     flex-direction: column;
+}
+
+.footer-menu a:hover {
+    color: #037bc0;
 }
 
 /*PAGINA NOSOTROS*/
@@ -313,7 +333,7 @@ img {
     margin-bottom: 3rem;
 }
 
-.articulo:last-of-type{
+.articulo:last-of-type {
     border: none;
 }
 
@@ -348,12 +368,49 @@ img {
     gap: 2rem;
 }
 
-.grid-galeria img{
+.grid-galeria img {
     width: 40rem;
     height: 40rem;
     object-fit: cover;
 }
 
+/*FORMULARIO*/
 
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
 
+.formulario fieldset {
+    border: 1px solid #000;
+    margin-bottom: 2rem;
+}
 
+.formulario legend {
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+textarea,
+select {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
